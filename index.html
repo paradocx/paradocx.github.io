@@ -73,12 +73,15 @@
   ul li {
     margin: 0;
     padding: 0;
-    text-indent: -0.75em;
-    padding-left: 0.75em;
+    text-indent: -0.8em;  /* 0.8在换行时能留出大概的间距 */
+    padding-left: 0.8em;
   }
   ul li:before {
     counter-increment: li; /* 每次使用计数器，其值增加1 */
     content: counter(li) ". "; /* 在每个<li>元素前添加序号 */
+    display: inline-block; /* 设置为内联块元素 */
+    width: 15px; /* 设置序号固定宽度 */
+    text-align: right; /* 序号右对齐 */
   }
 </style>
 <h2>Works</h2>
