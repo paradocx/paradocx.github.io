@@ -66,18 +66,19 @@
 </table>
 
 <style>
+  ul {
+    list-style: none; /* 移除默认的列表样式 */
+    counter-reset: li; /* 初始化计数器 */
+  }
   ul li {
     margin: 0;
     padding: 0;
+    text-indent: -2em;
+    padding-left: 2em;
   }
-  ul.custom-list {
-    list-style-type: none;
-    counter-reset: item;
-  }
-  ul.custom-list li:before {
-    counter-increment: item;
-    content: counter(item) ".";
-    margin-right: 5px;
+  ul li:before {
+    counter-increment: li; /* 每次使用计数器，其值增加1 */
+    content: counter(li) ". "; /* 在每个<li>元素前添加序号 */
   }
 </style>
 <h2>Works</h2>
