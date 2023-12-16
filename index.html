@@ -70,6 +70,15 @@
     margin: 0;
     padding: 0;
   }
+  ul.custom-list {
+    list-style-type: none;
+    counter-reset: item;
+  }
+  ul.custom-list li:before {
+    counter-increment: item;
+    content: counter(item) ".";
+    margin-right: 5px;
+  }
 </style>
 <h2>Works</h2>
 <table id="tbWorks" border="0" width="100%">
