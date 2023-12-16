@@ -66,18 +66,15 @@
 </table>
 
 
-<h2>News about Achievements</h2>
-<table id="tbNews" border="0" width="100%">
+<h2>Works</h2>
+<table id="tbWorks" border="0" width="100%">
   <tbody>
     <tr>
       <td> Dec.2023 - Now &nbsp; </td>    
       <td> <font size="3" face="楷体_GB2312"> 文生视频-双语视文CLIP</font> 
-           <br>
            <ul>
-           <li>
-           <font size="2" face="宋体">实现基于中英文词表的扩充训练，CN图文检索超过当前最强中文模型，EN图文检索略微弱于OpenCLIP；</font></li>
-           <br>
-           <font size="2" face="宋体">改造图文接口为视文对象，训练视文CLIP并注重中文本地特色化的语义对齐，实现高性能中文的视文检索。</font></li>
+           <li><font size="2" face="宋体">1.实现基于中英文词表的扩充训练，CN图文检索超过当前最强中文模型，EN图文检索略微弱于OpenCLIP；</font></li>
+           <li><font size="2" face="宋体">2.改造图文接口为视文对象，训练视文CLIP并注重中文本地特色化的语义对齐，实现高性能中文的视文检索。</font></li>
            </ul>    
       </td>
     </tr>
@@ -86,87 +83,66 @@
       <td> Aug.2023 - Dec.2023 &nbsp; </td>   
       <td style="border-top:1px solid lightgray;"> 
            <font size="3" face="楷体_GB2312"> 业务大模型(金融)-预训练、SFT的完整链路</font> 
-           <br>
-           <font size="2" face="宋体">&nbsp 1) 基于英文的llama2-70B模型拓展中文和金融能力，探索扩充词表和训练方案的最优组合；
-           <br>
-             &nbsp&nbsp Few-shot对比：(with llama2原始模型) 英文能力+0，中文能力+7.5，金融能力+8.1；(with GPT3.5模型) 英文能力-1.7，中文能力+5.6，金融能力+11；</font>
-           <br>
-           <font size="2" face="宋体">&nbsp 2) 进行金融的指令微调训练，获得财报总结、行情异动分析等To B业务的可交互的定制化功能；</font>
-           <br>
-           <font size="2" face="宋体">&nbsp 3) 性能优越的预训练模型还提供给保险业务大模型、通用SFT大模型研究等多个业务作为base model使用。</font>
-           <br>
+           <ul>
+           <li><font size="2" face="宋体">1.基于英文的llama2-70B模型拓展中文和金融能力，探索扩充词表和训练方案的最优组合；</font></li>
+           <li> &nbsp&nbsp <font size="2" face="宋体">Few-shot对比：(with llama2原始模型) 英文能力+0，中文能力+7.5，金融能力+8.1；(with GPT3.5模型) 英文能力-1.7，中文能力+5.6，金融能力+11；</font></li>
+           <li><font size="2" face="宋体">2.进行金融的指令微调训练，获得财报总结、行情异动分析等To B业务的可交互的定制化功能；</font></li>
+           <li><font size="2" face="宋体">3.性能优越的预训练模型提供给保险业务大模型、通用SFT大模型研究等多个业务作为base model使用。</font></li>
+           </ul>
       </td>
     </tr>
     <tr>
       <td> Apr.2023 - Aug.2023 &nbsp; </td>   
-      <td> <font size="3" face="楷体_GB2312"> 通用大模型(混元助手)-强化学习：RM、PPO和DPO</font> 
-           <br>
-           <font size="2" face="宋体">&nbsp 1) 全面提升原有SFT模型(热启动、冷启动)在NLP基础任务、逻辑推理、多轮对话、领域应用等多个方面的薄弱不足项，版本发测多次领先基座SFT模型；</font>
-           <br>
-           <font size="2" face="宋体">&nbsp 2) 提出引导式推理方案，调整ppo-ptx中主模型和奖励模型的交互策略，高效解决线上用户体验中的重点badcase问题；数学、物理计算题多次测试正确率提高约三倍，首次正确率0%->87%，强化模型的泛化推理能力得到显著提升；</font>
-           <br>
-           <font size="2" face="宋体">&nbsp 3) 176b RM的训练和迭代，最终奖励模型的验证精度（模型对同源数据的学习能力）为76.96% ，对比竞品llama2 RM： Safety 64.3%、Helpfulness 70.6%； 测试精度（模型对异源数据的泛化能力）为70.41% ，对比构造prompt使用GPT4自动打分44.0% 。</font>
-           <br>
+      <td style="border-top:1px solid lightgray;"> 
+           <font size="3" face="楷体_GB2312"> 通用大模型(混元助手)-强化学习：RM、PPO和DPO</font> 
+           <ul>
+           <li><font size="2" face="宋体">1.全面提升原有SFT模型(热启动、冷启动)在NLP基础任务、逻辑推理、多轮对话、领域应用等多个方面的薄弱不足项，版本发测多次领先基座SFT模型；</font></li>
+           <li><font size="2" face="宋体">2.提出引导式推理方案，调整ppo-ptx中主模型和奖励模型的交互策略，高效解决线上用户体验中的重点badcase问题；数学、物理计算题多次测试正确率提高约三倍，首次正确率0%->87%，强化模型的泛化推理能力得到显著提升；</font></li>
+           <li><font size="2" face="宋体">3.176b RM的训练和迭代，最终奖励模型的验证精度（模型对同源数据的学习能力）为76.96% ，对比竞品llama2 RM： Safety 64.3%、Helpfulness 70.6%； 测试精度（模型对异源数据的泛化能力）为70.41% ，对比构造prompt使用GPT4自动打分44.0% 。</font></li>
+           </ul>
       </td>
     </tr>
     <tr>
       <td> Feb.2023 - Apr.2023 &nbsp; </td>   
-      <td> <font size="3" face="楷体_GB2312"> 业务大模型(广告)-营销话术的SFT和强化学习</font> 
-           <br>
-           <font size="2" face="宋体">&nbsp 1) 实现基于医美、口腔、眼科、植发等重点行业信息的AIGC封闭式问答机器人；现阶段已经在消费医疗赛道-口腔打造正向案例，其中头部客户对比人工设置的问答，AI生成问答沉淀的线索有效率提升 44%（37.93%→54.55%），成本降低 21%（1110.0→918.4）；</font>
-           <br>
-           <font size="2" face="宋体">&nbsp 2) 基于客户喜好和转化需求，使用强化学习技术实现问答话术的个性化表达，兼具语言风格、交流能力、商品知识和营销导向等定制化的核心原子能力：拟人化程度高、态度亲切温和；理解商品相关行业属性知识图谱以及用户非专业表达的诉求；话术新鲜多样促进留存；</font>
-           <br>
+      <td style="border-top:1px solid lightgray;"> 
+           <font size="3" face="楷体_GB2312"> 业务大模型(广告)-营销话术的SFT和强化学习</font> 
+           <ul>
+           <li><font size="2" face="宋体">1.实现基于医美、口腔、眼科、植发等重点行业信息的AIGC封闭式问答机器人；现阶段已经在消费医疗赛道-口腔打造正向案例，其中头部客户对比人工设置的问答，AI生成问答沉淀的线索有效率提升 44%（37.93%→54.55%），成本降低 21%（1110.0→918.4）；</font></li>
+           <li><font size="2" face="宋体">2.基于客户喜好和转化需求，使用强化学习技术实现问答话术的个性化表达，兼具语言风格、交流能力、商品知识和营销导向等定制化的核心原子能力：拟人化程度高、态度亲切温和；理解商品相关行业属性知识图谱以及用户非专业表达的诉求；话术新鲜多样促进留存；</font></li>
+           </ul>
       </td>
     </tr>
     <tr>
       <td> Jan.2023 - Feb.2023 &nbsp; </td>   
-      <td> <font size="3" face="楷体_GB2312"> 文生图-SOTA的复现以及超越性能的改造</font> 
-           <br>
-           <font size="2" face="宋体">&nbsp 1) 根据业务需求，完成闭源工作DiT的复现；改造latent空间为像素级别进行训练，使用更大的参数量的transformer结构代替U-Net；</font>
-           <br>
-           <font size="2" face="宋体">&nbsp 2) ImageNet 256x256数据集上实验结果超过当前SOTA（FID：2.22>2.27）。</font>
-           <br>
+      <td style="border-top:1px solid lightgray;"> 
+           <font size="3" face="楷体_GB2312"> 文生图-SOTA的复现以及超越性能的改造</font> 
+           <ul>
+           <li><font size="2" face="宋体">1.根据业务需求，完成闭源工作DiT的复现；改造latent空间为像素级别进行训练，使用更大的参数量的transformer结构代替U-Net；</font></li>
+           <li><font size="2" face="宋体">2.ImageNet 256x256数据集上实验结果超过当前SOTA（FID：2.22>2.27）。</font></li>
+           </ul>
       </td>
     </tr> 
     <tr>
-      <td> Oct.2022 - Feb.2023 &nbsp; </td>   
-      <td> <font size="3" face="楷体_GB2312"> 人脸识别-工业应用的高难度case解决方案</font> 
-           <br>
-           <font size="2" face="宋体">&nbsp 1) 探索了多种人脸检索逻辑，最终方案不仅在人脸检测/识别性能上均大幅超越竞争对手，也是递交给合作方唯一突破0.9关卡实现高精度人脸性能的技术方案；</font>
-           <br>
-           <font size="2" face="宋体">&nbsp 2) 实现了真人/漫画两种场景的集成一体化服务，无需针对漫画场景设计额外模型或切换服务底层调整参数，即可实现高性能的漫画人脸检测和识别；</font>
-           <br>
-           <font size="2" face="宋体">&nbsp 3) 重点人物准召优化，大规模'涉政'人物召回指标0.9836远远高于竞品0.0717，二级标签acc指标为0.87，远超业务方需求0.8；</font>
-           <br>
-           <font size="2" face="宋体">&nbsp 4) 高度模糊场景、真人/相片多人多脸混合场景、黑白旧照片锐化失真场景、戴口罩等遮挡场景、漫画夸张场景的定点优化。</font>
-           <br>
+      <td > Oct.2022 - Feb.2023 &nbsp; </td>   
+      <td style="border-top:1px solid lightgray;"> 
+           <font size="3" face="楷体_GB2312"> 人脸识别-工业应用的高难度case解决方案</font> 
+           <ul>
+           <li><font size="2" face="宋体">1.探索了多种人脸检索逻辑，最终方案不仅在人脸检测/识别性能上均大幅超越竞争对手，也是递交给合作方唯一突破0.9关卡实现高精度人脸性能的技术方案；</font></li>
+           <li><font size="2" face="宋体">2.实现了真人/漫画两种场景的集成一体化服务，无需针对漫画场景设计额外模型或切换服务底层调整参数，即可实现高性能的漫画人脸检测和识别；</font></li>
+           <li><font size="2" face="宋体">3.重点人物准召优化，大规模'涉政'人物召回指标0.9836远远高于竞品0.0717，二级标签acc指标为0.87，远超业务方需求0.8；</font></li>
+           <li><font size="2" face="宋体">4.高度模糊场景、真人/相片多人多脸混合场景、黑白旧照片锐化失真场景、戴口罩等遮挡场景、漫画夸张场景的定点优化。</font></li>
+           </ul>
       </td>
     </tr>
     <tr>
       <td> Oct.2022 - Feb.2023 &nbsp; </td>   
-      <td> <font size="3" face="楷体_GB2312"> 人脸识别-工业应用的高难度case解决方案</font> 
-           <br>
-           <font size="2" face="宋体">&nbsp 1) 探索了多种人脸检索逻辑，最终方案不仅在人脸检测/识别性能上均大幅超越竞争对手，也是递交给合作方唯一突破0.9关卡实现高精度人脸性能的技术方案；</font>
-           <br>
-           <font size="2" face="宋体">&nbsp 2) 实现了真人/漫画两种场景的集成一体化服务，无需针对漫画场景设计额外模型或切换服务底层调整参数，即可实现高性能的漫画人脸检测和识别；</font>
-           <br>
-           <font size="2" face="宋体">&nbsp 3) 重点人物准召优化，大规模'涉政'人物召回指标0.9836远远高于竞品0.0717，二级标签acc指标为0.87，远超业务方需求0.8；</font>
-           <br>
-           <font size="2" face="宋体">&nbsp 4) 高度模糊场景、真人/相片多人多脸混合场景、黑白旧照片锐化失真场景、戴口罩等遮挡场景、漫画夸张场景的定点优化。</font>
-           <br>
-      </td>
-    </tr>
-    <tr>
-      <td> Oct.2022 - Feb.2023 &nbsp; </td>   
-      <td> <font size="3" face="楷体_GB2312"> 隐私保护计算-大数据场景的高精度概率回归模型</font> 
-           <br>
-           <font size="2" face="宋体">&nbsp 1) 开发联合概率密度与错误标签后验概率的高精度模型，针对隐私加密通信数据具有极高的检索/判断精度。对于1K/5K/1W数量的未知加密样本，模型平均精度从98+提升至99.9/99.7/99.6；</font>
-           <br>
-           <font size="2" face="宋体">&nbsp 2) 已经设计PSI抽样特征实现模型运行效率提高。目前特征从27降至7个，在实现高精度加密通信的同时单次运行效率达万分之三秒左右；</font>
-           <br>
-           <font size="2" face="宋体">&nbsp 3) 参加国际隐私保护和数据安全最高规格竞赛iDASH 2022-Task 4，并在该赛道以99.39的超高精度超过蚂蚁集团(去年双赛道冠军，99.04)等所有竞争对手斩获模型精度第一，综合隐私通信效率后摘得第二名。[<a href="./Diving(MPT2019)/prize.pdf" target="_blank">Prize</a>]</font>
-           <br>
+      <td style="border-top:1px solid lightgray;"> 
+           <font size="3" face="楷体_GB2312"> 隐私保护计算-大数据加密的高精度概率回归模型</font> 
+           <ul>
+           <li><font size="2" face="宋体">&nbsp 1) 开发联合概率密度与错误标签后验概率的高精度模型，针对隐私加密通信数据具有极高的检索/判断精度。对于1K/5K/1W数量的未知加密样本，模型平均精度从98+提升至99.9/99.7/99.6；</font></li>
+           <li><font size="2" face="宋体">&nbsp 2) 已经设计PSI抽样特征实现模型运行效率提高。目前特征从27降至7个，在实现高精度加密通信的同时单次运行效率达万分之三秒左右；</font></li>
+           <li><font size="2" face="宋体">&nbsp 3) 参加国际隐私保护和数据安全最高规格竞赛iDASH 2022-Task 4，并在该赛道以99.39的超高精度超过蚂蚁集团(去年双赛道冠军，99.04)等所有竞争对手斩获模型精度第一，综合隐私通信效率后摘得第二名。[<a href="./Diving(MPT2019)/prize.pdf" target="_blank">Prize</a>]</font></li>
+           </ul>
       </td>
     </tr>
   </tbody>
