@@ -65,131 +65,11 @@
 </tbody>
 </table>
 
-<style>
-  ul {
-    list-style: none; /* 移除默认的列表样式 */
-    counter-reset: li; /* 初始化计数器 */
-  }
-  ul li {
-    margin: 0;
-    padding: 0;
-    text-indent: -0.87em;  /* 0.87在换行时能留出大概的间距 */
-    padding-left: 0.87em;
-  }
-  ul li:before {
-    counter-increment: li; /* 每次使用计数器，其值增加1 */
-    content: counter(li) ". "; /* 在每个<li>元素前添加序号 */
-    display: inline-block; /* 设置为内联块元素 */
-    width: 15px; /* 设置序号固定宽度 */
-    text-align: right; /* 序号右对齐 */
-  }
-</style>
-<h2>Works</h2>
-<table id="tbWorks" border="0" width="100%">
-  <tbody>
-    <tr>
-      <td> Dec.2023 - Now &nbsp; </td>    
-      <td style="border-bottom:1px solid lightgray;"> 
-           <br>
-           <font size="3" face="楷体_GB2312" style="color: #4e72b8;"> 文生视频-双语视文CLIP</font> 
-           <ul>
-           <li><font size="2" face="宋体">实现基于中英文词表的扩充训练，CN图文检索超过当前最强中文模型，EN图文检索略微弱于OpenCLIP；</font></li>
-           <li><font size="2" face="宋体">改造图文接口为视文对象，训练视文CLIP并注重中文本地特色化的语义对齐，实现高性能中文的视文检索。</font></li>
-           </ul>    
-      </td>
-    </tr>
-    <tr>
-      <td> Aug.2023 - Dec.2023 &nbsp; </td>   
-      <td style="border-bottom:1px solid lightgray;"> 
-           <br>
-           <font size="3" face="楷体_GB2312" style="color: #4e72b8;"> 业务大模型(金融)-预训练、SFT的完整链路</font> 
-           <ul>
-           <li><font size="2" face="宋体">基于英文的llama2-70B模型拓展中文和金融能力，探索扩充词表和训练方案的最优组合；合作方Few-shot测试对比：(with llama2原始模型)英文能力+0，中文能力+7.5，金融能力+8.1；(with GPT3.5模型)英文能力-1.7，中文能力+5.6，金融能力+11；</font></li>
-           <li><font size="2" face="宋体">金融的指令微调训练，获得财报总结、行情异动分析等To B业务的可交互的定制化功能；</font></li>
-           <li><font size="2" face="宋体">性能优越的预训练模型提供给保险业务大模型、通用SFT大模型研究等多个业务作为base model使用。</font></li>
-           </ul>
-      </td>
-    </tr>
-    <tr>
-      <td> Apr.2023 - Aug.2023 &nbsp; </td>   
-      <td style="border-bottom:1px solid lightgray;"> 
-           <br>
-           <font size="3" face="楷体_GB2312" style="color: #4e72b8;"> 通用大模型(混元助手)-强化学习：RM、PPO和DPO</font> 
-           <ul>
-           <li><font size="2" face="宋体">全面提升原有SFT模型(热、冷启动)在NLP基础任务、逻辑推理、多轮对话、领域应用等多个方面的薄弱不足项，版本发测多次领先；</font></li>
-           <li><font size="2" face="宋体">提出引导式推理方案，调整ppo-ptx中主模型和奖励模型的交互策略，高效解决线上用户体验中的重点badcase问题；数学、物理计算题多次测试正确率提高约三倍，首次正确率0%->87%，强化模型的泛化推理能力得到显著提升；</font></li>
-           <li><font size="2" face="宋体">176b RM的训练和迭代，最终奖励模型的验证精度(模型对同源数据的学习能力)为76.96% ，对比竞品llama2 RM： Safety 64.3%、Helpfulness 70.6%； 测试精度(模型对异源数据的泛化能力)为70.41% ，对比构造prompt使用GPT4自动打分44.0% 。</font></li>
-           </ul>
-      </td>
-    </tr>
-    <tr>
-      <td> Feb.2023 - Apr.2023 &nbsp; </td>   
-      <td style="border-bottom:1px solid lightgray;"> 
-           <br>
-           <font size="3" face="楷体_GB2312" style="color: #4e72b8;"> 业务大模型(广告)-营销话术的SFT和强化学习</font> 
-           <ul>
-           <li><font size="2" face="宋体">实现基于医美、口腔、眼科、植发等重点行业信息的AIGC封闭式问答机器人；现阶段已经在消费医疗赛道-口腔打造正向案例，其中头部客户对比人工设置的问答，AI生成问答沉淀的线索有效率提升44%(37.93%→54.55%)，成本降低21%(1110.0→918.4)；</font></li>
-           <li><font size="2" face="宋体">基于客户喜好和转化需求，使用强化学习技术实现问答话术的个性化表达，兼具语言风格、交流能力、商品知识和营销导向等定制化的核心原子能力：拟人化程度高、态度亲切温和；理解商品相关行业属性知识图谱以及用户非专业表达的诉求；话术新鲜多样促进留存。</font></li>
-           </ul>
-      </td>
-    </tr>
-    <tr>
-      <td> Jan.2023 - Feb.2023 &nbsp; </td>   
-      <td style="border-bottom:1px solid lightgray;"> 
-           <br>
-           <font size="3" face="楷体_GB2312" style="color: #4e72b8;"> 文生图-SOTA的复现以及超越性能的改造</font> 
-           <ul>
-           <li><font size="2" face="宋体">根据业务需求，完成闭源工作DiT的复现；改造latent空间为像素级别进行训练，使用更大的参数量的transformer结构代替U-Net；</font></li>
-           <li><font size="2" face="宋体">ImageNet 256x256数据集上实验结果超过当前SOTA(FID：2.22>2.27)。</font></li>
-           </ul>
-      </td>
-    </tr> 
-    <tr>
-      <td > Oct.2022 - Feb.2023 &nbsp; </td>   
-      <td style="border-bottom:1px solid lightgray;"> 
-           <br>
-           <font size="3" face="楷体_GB2312" style="color: #4e72b8;"> 人脸识别-工业应用的高难度case解决方案</font> 
-           <ul>
-           <li><font size="2" face="宋体">人脸检索逻辑方案在人脸检测/识别性能上均大幅超越竞争对手，递交给合作方唯一突破0.9的高精度技术方案；</font></li>
-           <li><font size="2" face="宋体">实现了真人/漫画两种场景的集成一体化服务，无需针对漫画场景使用额外模型或切换服务底层调整参数；</font></li>
-           <li><font size="2" face="宋体">重点人物准召优化，大规模'涉政'人物召回指标0.9836远远高于竞品0.0717，二级标签acc指标为0.87，远超业务方需求0.8；</font></li>
-           <li><font size="2" face="宋体">高度模糊场景、真人/相片多人多脸混合场景、黑白旧照片锐化失真场景、戴口罩等遮挡场景、漫画夸张场景的定点优化。</font></li>
-           </ul>
-      </td>
-    </tr>
-    <tr>
-      <td> Aug.2022 - Oct.2022 &nbsp; </td>   
-      <td style="border-bottom:1px solid lightgray;">
-           <br>
-           <font size="3" face="楷体_GB2312" style="color: #4e72b8;"> 隐私保护计算-大数据加密的高精度概率回归模型</font> 
-           <ul>
-           <li><font size="2" face="宋体">开发联合概率密度与错误标签后验概率的高精度模型，针对隐私加密通信数据具有极高的检索/判断精度。对于1K/5K/1W数量的未知加密样本，模型平均精度从98+提升至99.9/99.7/99.6；</font></li>
-           <li><font size="2" face="宋体">PSI抽样特征从27降至7个，在实现高精度加密通信的同时单次运行效率达万分之三秒左右；</font></li>
-           <li><font size="2" face="宋体">参加iDASH 2022-Task 4，并在该赛道以99.39的超高精度超过蚂蚁集团(去年双赛道冠军，99.04)等所有竞争对手斩获模型精度第一，综合隐私通信效率后获得第二名。[<a href="./Awards/22iDASH.jpg" target="_blank">Prize</a>]</font></li>
-           </ul>
-      </td>
-    </tr>
-    <tr>
-      <td> Jun.2022 - Aug.2022 &nbsp; </td>   
-      <td style="border-bottom:1px solid lightgray;">
-           <br>
-           <font size="3" face="楷体_GB2312" style="color: #4e72b8;"> 广告特征工程-视文相关性和精排特征实验</font> 
-           <ul>
-           <li><font size="2" face="宋体">通用TVR算法开发，实验结果对比多数前沿算法有超过15%的性能提升，与当前大模型SOTA方法HunYuan_TVR性能相当；</font></li>
-           <li><font size="2" face="宋体">广告业务场景TVR算法，R1结果表明潜在自动化审核处理效率预估能提高约10%，全行业测试集分类准确率87.3%；</font></li>
-           <li><font size="2" face="宋体">关联广告特征数据与用户特征数据，实现广告特征精排上线流程；完成公众号文章/广告双emb特征相关性推送上线。</font></li>
-           </ul>
-      </td>
-    </tr>
-  </tbody>
-</table> 
-
-
 
   
 <h2>Biography</h2>
 <p style="text-align:justify;">
-  I am currently a researcher at Data Platform, Tencent. I received my PhD degree at <a href="http://www.amss.ac.cn/" target="_blank">Academy of Mathematics and Systems Science of the Chinese Academy of Sciences (AMSS, CAS)</a> and <a href="https://english.ucas.ac.cn/" target="_blank"> University of Chinese Academy of Sciences (UCAS) </a>. My supervisor is Prof.<a href="http://www.mmrc.iss.ac.cn/~xhjia/" target="_blank"> Xiaohong Jia </a>. Before that,   I received my Bachelor's degree of <a href="http://math.nwpu.edu.cn/en/home.htm" target="_blank"> Information and Computing Science</a> from <a href="https://en.nwpu.edu.cn/" target="_blank"> Northwestern Polytechnical University (NWPU)</a> in 2017. 
+  I am currently a researcher at Data Platform, Tencent. I received my PhD degree at <a href="http://www.amss.ac.cn/" target="_blank">Academy of Mathematics and Systems Science of the Chinese Academy of Sciences (AMSS, CAS)</a> and <a href="https://english.ucas.ac.cn/" target="_blank"> University of Chinese Academy of Sciences (UCAS) </a>. My supervisor is Prof.<a href="http://www.mmrc.iss.ac.cn/~xhjia/" target="_blank"> Xiaohong Jia </a> （AMSS, CAS） and  Prof. <a href="https://sites.google.com/site/yandongming/" target="_blank">Dong-Ming Yan</a> form National Laboratory of Pattern Recognition(NLPR), Institute of Automation of CAS(CASIA). Before that,   I received my Bachelor's degree of <a href="http://math.nwpu.edu.cn/en/home.htm" target="_blank"> Information and Computing Science</a> from <a href="https://en.nwpu.edu.cn/" target="_blank"> Northwestern Polytechnical University (NWPU)</a> in 2017. 
 </p>
 <p> 
   My current research spot is AIGC, including large models and multi-modality. My research interest also includes computer graphics and computer vision. My resume can be found [<a href="./MyCV.pdf" target="_blank"> here </a>].
@@ -373,28 +253,153 @@
   </tbody>
 </table>  
 
+<style>
+  ul {
+    list-style: none; /* 移除默认的列表样式 */
+    counter-reset: li; /* 初始化计数器 */
+  }
+  ul li {
+    margin: 0;
+    padding: 0;
+    text-indent: -0.87em;  /* 0.87在换行时能留出大概的间距 */
+    padding-left: 0.87em;
+  }
+  ul li:before {
+    counter-increment: li; /* 每次使用计数器，其值增加1 */
+    content: counter(li) ". "; /* 在每个<li>元素前添加序号 */
+    display: inline-block; /* 设置为内联块元素 */
+    width: 15px; /* 设置序号固定宽度 */
+    text-align: right; /* 序号右对齐 */
+  }
+</style>
+<h2>Works</h2>
+<table id="tbWorks" border="0" width="100%">
+  <tbody>
+    <tr>
+      <td> Dec.2023 - Now &nbsp; </td>    
+      <td style="border-bottom:1px solid lightgray;"> 
+           <br>
+           <font size="3" face="楷体_GB2312" style="color: #4e72b8;"> 文生视频-双语视文CLIP</font> 
+           <ul>
+           <li><font size="2" face="宋体">实现基于中英文词表的扩充训练，CN图文检索超过当前最强中文模型，EN图文检索略微弱于OpenCLIP；</font></li>
+           <li><font size="2" face="宋体">改造图文接口为视文对象，训练视文CLIP并注重中文本地特色化的语义对齐，实现高性能中文的视文检索。</font></li>
+           </ul>    
+      </td>
+    </tr>
+    <tr>
+      <td> Aug.2023 - Dec.2023 &nbsp; </td>   
+      <td style="border-bottom:1px solid lightgray;"> 
+           <br>
+           <font size="3" face="楷体_GB2312" style="color: #4e72b8;"> 业务大模型(金融)-预训练、SFT的完整链路</font> 
+           <ul>
+           <li><font size="2" face="宋体">基于英文的llama2-70B模型拓展中文和金融能力，探索扩充词表和训练方案的最优组合；合作方Few-shot测试对比：(with llama2原始模型)英文能力+0，中文能力+7.5，金融能力+8.1；(with GPT3.5模型)英文能力-1.7，中文能力+5.6，金融能力+11；</font></li>
+           <li><font size="2" face="宋体">金融的指令微调训练，获得财报总结、行情异动分析等To B业务的可交互的定制化功能；</font></li>
+           <li><font size="2" face="宋体">性能优越的预训练模型提供给保险业务大模型、通用SFT大模型研究等多个业务作为base model使用。</font></li>
+           </ul>
+      </td>
+    </tr>
+    <tr>
+      <td> Apr.2023 - Aug.2023 &nbsp; </td>   
+      <td style="border-bottom:1px solid lightgray;"> 
+           <br>
+           <font size="3" face="楷体_GB2312" style="color: #4e72b8;"> 通用大模型(混元助手)-强化学习：RM、PPO和DPO</font> 
+           <ul>
+           <li><font size="2" face="宋体">全面提升原有SFT模型(热、冷启动)在NLP基础任务、逻辑推理、多轮对话、领域应用等多个方面的薄弱不足项，版本发测多次领先；</font></li>
+           <li><font size="2" face="宋体">提出引导式推理方案，调整ppo-ptx中主模型和奖励模型的交互策略，高效解决线上用户体验中的重点badcase问题；数学、物理计算题多次测试正确率提高约三倍，首次正确率0%->87%，强化模型的泛化推理能力得到显著提升；</font></li>
+           <li><font size="2" face="宋体">176b RM的训练和迭代，最终奖励模型的验证精度(模型对同源数据的学习能力)为76.96% ，对比竞品llama2 RM： Safety 64.3%、Helpfulness 70.6%； 测试精度(模型对异源数据的泛化能力)为70.41% ，对比构造prompt使用GPT4自动打分44.0% 。</font></li>
+           </ul>
+      </td>
+    </tr>
+    <tr>
+      <td> Feb.2023 - Apr.2023 &nbsp; </td>   
+      <td style="border-bottom:1px solid lightgray;"> 
+           <br>
+           <font size="3" face="楷体_GB2312" style="color: #4e72b8;"> 业务大模型(广告)-营销话术的SFT和强化学习</font> 
+           <ul>
+           <li><font size="2" face="宋体">实现基于医美、口腔、眼科、植发等重点行业信息的AIGC封闭式问答机器人；现阶段已经在消费医疗赛道-口腔打造正向案例，其中头部客户对比人工设置的问答，AI生成问答沉淀的线索有效率提升44%(37.93%→54.55%)，成本降低21%(1110.0→918.4)；</font></li>
+           <li><font size="2" face="宋体">基于客户喜好和转化需求，使用强化学习技术实现问答话术的个性化表达，兼具语言风格、交流能力、商品知识和营销导向等定制化的核心原子能力：拟人化程度高、态度亲切温和；理解商品相关行业属性知识图谱以及用户非专业表达的诉求；话术新鲜多样促进留存。</font></li>
+           </ul>
+      </td>
+    </tr>
+    <tr>
+      <td> Jan.2023 - Feb.2023 &nbsp; </td>   
+      <td style="border-bottom:1px solid lightgray;"> 
+           <br>
+           <font size="3" face="楷体_GB2312" style="color: #4e72b8;"> 文生图-SOTA的复现以及超越性能的改造</font> 
+           <ul>
+           <li><font size="2" face="宋体">根据业务需求，完成闭源工作DiT的复现；改造latent空间为像素级别进行训练，使用更大的参数量的transformer结构代替U-Net；</font></li>
+           <li><font size="2" face="宋体">ImageNet 256x256数据集上实验结果超过当前SOTA(FID：2.22>2.27)。</font></li>
+           </ul>
+      </td>
+    </tr> 
+    <tr>
+      <td > Oct.2022 - Feb.2023 &nbsp; </td>   
+      <td style="border-bottom:1px solid lightgray;"> 
+           <br>
+           <font size="3" face="楷体_GB2312" style="color: #4e72b8;"> 人脸识别-工业应用的高难度case解决方案</font> 
+           <ul>
+           <li><font size="2" face="宋体">人脸检索逻辑方案在人脸检测/识别性能上均大幅超越竞争对手，递交给合作方唯一突破0.9的高精度技术方案；</font></li>
+           <li><font size="2" face="宋体">实现了真人/漫画两种场景的集成一体化服务，无需针对漫画场景使用额外模型或切换服务底层调整参数；</font></li>
+           <li><font size="2" face="宋体">重点人物准召优化，大规模'涉政'人物召回指标0.9836远远高于竞品0.0717，二级标签acc指标为0.87，远超业务方需求0.8；</font></li>
+           <li><font size="2" face="宋体">高度模糊场景、真人/相片多人多脸混合场景、黑白旧照片锐化失真场景、戴口罩等遮挡场景、漫画夸张场景的定点优化。</font></li>
+           </ul>
+      </td>
+    </tr>
+    <tr>
+      <td> Aug.2022 - Oct.2022 &nbsp; </td>   
+      <td style="border-bottom:1px solid lightgray;">
+           <br>
+           <font size="3" face="楷体_GB2312" style="color: #4e72b8;"> 隐私保护计算-大数据加密的高精度概率回归模型</font> 
+           <ul>
+           <li><font size="2" face="宋体">开发联合概率密度与错误标签后验概率的高精度模型，针对隐私加密通信数据具有极高的检索/判断精度。对于1K/5K/1W数量的未知加密样本，模型平均精度从98+提升至99.9/99.7/99.6；</font></li>
+           <li><font size="2" face="宋体">PSI抽样特征从27降至7个，在实现高精度加密通信的同时单次运行效率达万分之三秒左右；</font></li>
+           <li><font size="2" face="宋体">参加iDASH 2022-Task 4，并在该赛道以99.39的超高精度超过蚂蚁集团(去年双赛道冠军，99.04)等所有竞争对手斩获模型精度第一，综合隐私通信效率后获得第二名。[<a href="./Awards/22iDASH.jpg" target="_blank">Prize</a>]</font></li>
+           </ul>
+      </td>
+    </tr>
+    <tr>
+      <td> Jun.2022 - Aug.2022 &nbsp; </td>   
+      <td style="border-bottom:1px solid lightgray;">
+           <br>
+           <font size="3" face="楷体_GB2312" style="color: #4e72b8;"> 广告特征工程-视文相关性和精排特征实验</font> 
+           <ul>
+           <li><font size="2" face="宋体">通用TVR算法开发，实验结果对比多数前沿算法有超过15%的性能提升，与当前大模型SOTA方法HunYuan_TVR性能相当；</font></li>
+           <li><font size="2" face="宋体">广告业务场景TVR算法，R1结果表明潜在自动化审核处理效率预估能提高约10%，全行业测试集分类准确率87.3%；</font></li>
+           <li><font size="2" face="宋体">关联广告特征数据与用户特征数据，实现广告特征精排上线流程；完成公众号文章/广告双emb特征相关性推送上线。</font></li>
+           </ul>
+      </td>
+    </tr>
+  </tbody>
+</table> 
 
- <h2>Honorary Awards</h2>
+
+<h2>Honorary Awards</h2>
 <table id="tbAwards" border="0" width="100%">
   <tbody>
     <tr>
       <td> 2018&nbsp; </td>   
       <td> 
-       <a href="./Awards/18MM.pdf" target="_blank"><strong> First Prize </strong></a>  of the 15th China Post-Graduate Mathematical Contest in Modeling [<font color="#FF0000" size="3" face="Times New Roman"> <i>Top 1%</i> </font>]   </td>
+       <a href="./Awards/18MM.pdf" target="_blank"><strong> First Prize </strong></a>  of the 15th China Post-Graduate Mathematical Contest in Modeling [<font color="#FF0000" size="3" face="Times New Roman"> <i>Top 1% ↓ </i> </font>]   </td>
     </tr>
     <tr>
       <td> 2019&nbsp; </td>   
       <td> 
-           <a href="./Awards/19PMS.pdf" target="_blank"><strong> Pacemaker to Merit Student </strong></a>  of CAS <font size="3" face="楷体_GB2312"> (中科院三好学生标兵) </font> [<font color="#FF0000" size="3" face="Times New Roman"> <i>Top 1%</i> </font>] </td>
+           <a href="./Awards/19PMS.pdf" target="_blank"><strong> Pacemaker to Merit Student </strong></a>  of CAS <font size="3" face="楷体_GB2312"> (中科院三好学生标兵) </font> [<font color="#FF0000" size="3" face="Times New Roman"> <i>Top 1% ↓ </i> </font>] </td>
     </tr>
     <tr>
-      <td> 2020-2022 (3 years)  </td>   
+      <td> 2020-2022 (4 years)  </td>   
       <td> Excellent Merit Student of CAS <font size="3" face="楷体_GB2312"> (中科院优秀三好学生)</font> [<a href="./Awards/20MS.pdf" target="_blank">2020</a>, <a href="./Awards/21MS.pdf" target="_blank">2021</a>,<a href="./Awards/22MS.pdf" target="_blank">2022</a>]</td>
      </tr>  
       <tr>
       <td> 2021&nbsp;</td>   
       <td>   
-      <a href="./Awards/21NP.pdf" target="_blank"><strong> National Scholarship </strong></a>   <font size="3" face="楷体_GB2312"> (国家奖学金)</font>  [<font color="#FF0000" size="3" face="Times New Roman"> <i>Top 1%</i> </font>]
+      <a href="./Awards/21NP.pdf" target="_blank"><strong> National Scholarship </strong></a>   <font size="3" face="楷体_GB2312"> (国家奖学金)</font>  [<font color="#FF0000" size="3" face="Times New Roman"> <i> Top 1% ↓ </i> </font>]
+       </td>
+    </tr>  
+      <tr>
+      <td> 2022&nbsp;</td>   
+      <td>   
+      <a href="./Awards/21NP.pdf" target="_blank"><strong> CAS Presidential Scholarship </strong></a>   <font size="3" face="楷体_GB2312"> (中科院院长奖)</font>  [<font color="#FF0000" size="3" face="Times New Roman"> <i>Top 1%↓ </i> </font>]
        </td>
     </tr>  
   </tbody>
@@ -415,7 +420,7 @@
     </tr>
     <tr>
       <td> Mar.2017 - Sep.2021 &nbsp; </td>   
-      <td> Visiting student,  National Laboratory of Pattern Recognition(NLPR), Institute of Automation, Chinese Academy of Sciences(CASIA) (Beijing), directed by <a href="https://sites.google.com/site/yandongming/" target="_blank"> Prof. Dong-Ming Yan</td>
+      <td> Visiting student, department of Automation (Research) and department of Mathematics (CAD Project), Tsinghua University (Beijing). </td>
     </tr>  
   </tbody>
 </table> 
